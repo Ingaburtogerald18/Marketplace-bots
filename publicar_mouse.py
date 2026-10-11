@@ -26,6 +26,8 @@ import pyautogui
 import pyperclip
 from PIL import Image, ImageOps
 
+from navegador import preparar_navegador
+
 CARPETA = Path(__file__).resolve().parent
 BOTONES = CARPETA / "Botones" / "Crear"
 PUBLICACIONES = CARPETA / "publicaciones"
@@ -154,13 +156,18 @@ def marcar_grupos(lista):
     casilla = Image.open(BOTONES / "casilla.png").convert("RGB")
     if escala and escala != 1.0:
         casilla = casilla.resize((round(casilla.width * escala), round(casilla.height * escala)), Image.LANCZOS)
+    # La casilla se recorto en modo oscuro; invertida sirve para modo claro.
+    variantes = ((casilla, False), (ImageOps.invert(casilla.convert("L")).convert("RGB"), True))
     marcados = 0
     sin_nuevos = 0
     while marcados < MAX_GRUPOS and sin_nuevos < 2:
-        try:
-            casillas = list(pyautogui.locateAllOnScreen(casilla, confidence=0.9))
-        except pyautogui.ImageNotFoundException:
-            casillas = []
+        casillas = []
+        for imagen, gris in variantes:
+            try:
+                casillas += list(pyautogui.locateAllOnScreen(imagen, confidence=0.9, grayscale=gris))
+            except Exception as e:  # noqa: BLE001 - "no encontre ninguna" no es un error
+                if "ImageNotFound" not in type(e).__name__:
+                    raise
         if not casillas:
             sin_nuevos += 1
         else:
@@ -260,8 +267,7 @@ def main():
     if not carpetas:
         raise SystemExit("No hay articulos en publicaciones/ (cada uno necesita su datos.txt).")
 
-    print("Tienes 5 segundos para poner al frente tu navegador con Facebook...")
-    time.sleep(5)
+    preparar_navegador(URL_CREAR)
     for carpeta in carpetas:
         try:
             publicar(carpeta, args.confirmar)
