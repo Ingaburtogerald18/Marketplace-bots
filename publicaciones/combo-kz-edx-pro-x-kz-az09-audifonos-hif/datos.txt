@@ -1,0 +1,4 @@
+titulo: Combo KZ EDX Pro X + KZ AZ09 — Audífonos HiFi + Adaptador Bluetooth True Wireless
+precio: 1300
+categoria: Electrónica e informática
+estado: Nuevo

@@ -1,0 +1,4 @@
+titulo: Micrófono Inalámbrico M9 — Lightning
+precio: 900
+categoria: Electrónica e informática
+estado: Nuevo

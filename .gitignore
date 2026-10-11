@@ -1,0 +1,4 @@
+__pycache__/
+.venv/
+error_*.png
+falta_*.png

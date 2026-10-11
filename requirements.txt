@@ -1,0 +1,6 @@
+pyautogui>=0.9.54
+opencv-python>=4.10
+pillow>=10.0
+pyperclip>=1.8
+pillow-heif>=0.18
+sv-ttk>=2.6

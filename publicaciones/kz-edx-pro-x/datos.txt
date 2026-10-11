@@ -1,0 +1,4 @@
+titulo: KZ EDX Pro X — Audífonos HiFi In-Ear
+precio: 450
+categoria: Electrónica e informática
+estado: Nuevo

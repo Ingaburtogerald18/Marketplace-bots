@@ -1,0 +1,4 @@
+titulo: Attack Shark R1 — Mouse Gaming Inalámbrico
+precio: 1000
+categoria: Electrónica e informática
+estado: Nuevo

@@ -1,0 +1,4 @@
+titulo: 🔌 ADAPTADOR BLUETOOTH KZ AZ10 | True Wireless para tus KZ | C$1300 🔌
+precio: 1300
+categoria: Electrónica e informática
+estado: Nuevo

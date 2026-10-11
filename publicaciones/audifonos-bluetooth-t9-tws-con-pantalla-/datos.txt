@@ -1,0 +1,4 @@
+titulo: Audífonos Bluetooth T9 TWS — con pantalla LED
+precio: 600
+categoria: Electrónica e informática
+estado: Nuevo
