@@ -23,6 +23,7 @@ import time
 from pathlib import Path
 
 import pyautogui
+from PIL import Image, ImageOps
 
 BOTONES = Path(__file__).resolve().parent / "botones"
 URL_VENTAS = "https://www.facebook.com/marketplace/you/selling"
@@ -60,13 +61,20 @@ def buscar(nombre, zona=None, espera=6, caja=False):
 
     Devuelve su centro (o su caja completa si caja=True), o None.
     """
-    ruta = str(BOTONES / f"{nombre}.png")
+    recorte = Image.open(BOTONES / f"{nombre}.png").convert("RGB")
+    # Version invertida en gris: asi los recortes de Facebook en modo oscuro
+    # tambien sirven en modo claro (y en otro navegador con otro tema).
+    invertido = ImageOps.invert(recorte.convert("L")).convert("RGB")
     inicio = time.time()
     while time.time() - inicio < espera:
-        try:
-            encontrado = pyautogui.locateOnScreen(ruta, confidence=PARECIDO, region=zona)
-        except pyautogui.ImageNotFoundException:
-            encontrado = None
+        encontrado = None
+        for imagen, gris in ((recorte, False), (invertido, True)):
+            try:
+                encontrado = pyautogui.locateOnScreen(imagen, confidence=PARECIDO, region=zona, grayscale=gris)
+            except pyautogui.ImageNotFoundException:
+                encontrado = None
+            if encontrado:
+                break
         if encontrado:
             print(f"   {nombre}: encontrado en {time.time() - inicio:.1f} s")
             return encontrado if caja else pyautogui.center(encontrado)
@@ -75,16 +83,18 @@ def buscar(nombre, zona=None, espera=6, caja=False):
     return None
 
 
-def guardar_error(punto, zona):
+def guardar_error(punto=None, zona=None):
     """Guarda error_borrar.png marcando en rojo donde dio clic y donde busco."""
     from PIL import ImageDraw
 
     imagen = pyautogui.screenshot()
     dibujo = ImageDraw.Draw(imagen)
-    izq, arriba, ancho, alto = zona
-    dibujo.rectangle([izq, arriba, izq + ancho, arriba + alto], outline="red", width=4)
-    dibujo.ellipse([punto.x - 20, punto.y - 20, punto.x + 20, punto.y + 20], outline="red", width=4)
-    imagen.save("error_borrar.png")
+    if zona:
+        izq, arriba, ancho, alto = zona
+        dibujo.rectangle([izq, arriba, izq + ancho, arriba + alto], outline="red", width=4)
+    if punto:
+        dibujo.ellipse([punto.x - 20, punto.y - 20, punto.x + 20, punto.y + 20], outline="red", width=4)
+    imagen.save(Path(__file__).resolve().parent / "error_borrar.png")
     print("   Guarde error_borrar.png: circulo = donde di clic, cuadro = donde busque.")
 
 
@@ -108,6 +118,7 @@ def borrar_una(confirmar):
     # Esto tambien espera a que la pagina termine de cargar.
     compartir = buscar("compartir", espera=15, caja=True)
     if not compartir:
+        guardar_error()
         return False
     a_la_derecha = recortar_a_pantalla(compartir.left + compartir.width, compartir.top - 15,
                                        120, compartir.height + 30)
@@ -119,11 +130,12 @@ def borrar_una(confirmar):
                                     700 + compartir.width + 120, 80)
         puntos = buscar("opciones", zona=abajo, espera=2)
     if not puntos:
+        guardar_error(zona=abajo)
         return False
     clic(puntos)
 
     zona = zona_alrededor(puntos)
-    eliminar = buscar("eliminar", zona=zona)
+    eliminar = buscar("eliminar", zona=zona, espera=10)
     if not eliminar:
         guardar_error(puntos, zona)
         pyautogui.press("esc")
@@ -136,7 +148,7 @@ def borrar_una(confirmar):
         return True
     clic(eliminar)
 
-    boton_final = buscar("confirmar", zona=zona_centro())
+    boton_final = buscar("confirmar", zona=zona_centro(), espera=20)  # a veces Facebook tarda en abrirlo
     if not boton_final:
         guardar_error(eliminar, zona_centro())
         pyautogui.press("esc")
