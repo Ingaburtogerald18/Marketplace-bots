@@ -1,0 +1,9 @@
+{
+  "accion": "borrar",
+  "inicio": "2026-10-25T09:51:00",
+  "fin": "2026-10-25T09:51:29",
+  "borradas": 0,
+  "mensaje": "",
+  "mensaje_borrar": "Algo no apareció al borrar; me detuve.",
+  "resultados": []
+}

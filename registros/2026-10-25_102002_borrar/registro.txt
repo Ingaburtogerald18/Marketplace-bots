@@ -1,0 +1,72 @@
+2026-10-25 10:20 · Borrar
+Pongo al frente: Facebook and 1 more page - Work - Microsoft Edge
+   borrar/compartir: encontrado en 0.5 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 1:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.9 s
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   borrar/motivo_siguiente: encontrado en 0.1 s
+   Borrada. Total: 1
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 2:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.8 s
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   borrar/motivo_siguiente: encontrado en 0.0 s
+   Borrada. Total: 2
+   borrar/compartir: encontrado en 0.5 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 3:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.9 s
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   borrar/motivo_siguiente: encontrado en 0.0 s
+   Borrada. Total: 3
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 4:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.9 s
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 4
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 5:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.9 s
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 5
+   borrar/compartir: encontrado en 0.5 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 6:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 1.2 s
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 6
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.5 s
+Publicación 7:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.8 s
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 7
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 8:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.9 s
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 8
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 9:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.9 s
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 9
+⏹ Lo detuviste.

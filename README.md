@@ -37,7 +37,7 @@ Marketplace bots/
 ├─ recursos/botones/           recortes de los botones de Facebook
 │  ├─ borrar/                  compartir, opciones, eliminar, confirmar, vacio
 │  └─ crear/                   campos del formulario, categorias/, estados/
-├─ registros/                  lo que pasó cada vez (solo en esta PC, no va a git)
+├─ registros/                  lo que pasó cada vez, con capturas de los fallos (sí va a git)
 ├─ src/marketplace_bot/        el programa
 │  ├─ config.py                rutas y ajustes
 │  ├─ modelos.py               Plantilla y Resultado
@@ -72,8 +72,10 @@ está en otro idioma, el mismo botón puede tener una variante `nombre_en.png`.
 Los recortes deben ser solo el botón, sin el borde de la tarjeta: así sirven en
 modo claro y oscuro.
 
-Cuando algo falla, la captura queda en `registros/<fecha>/` con un círculo donde
+Cuando algo falla, la captura queda en `registros/<fecha>_<acción>_<usuario>/` con un círculo donde
 dio clic y un cuadro donde buscó. Esa captura sirve para recortar lo que falte.
+Esas carpetas se suben con git: si a alguien le falla en otra PC, hace commit y push
+y la captura llega a los demás con `git pull`.
 
 ## Sin ventana (para pruebas)
 ```

@@ -182,7 +182,7 @@ class VistaHoy:
     # ---------- ultimo resultado ----------
     def _ultimo_resultado(self):
         app = self.app
-        corridas = leer_corridas(app.rutas, limite=1)
+        corridas = leer_corridas(app.rutas, limite=1, solo_mias=True)
         if not corridas or app.ejecutor.corriendo:
             return ft.Container()
         c = corridas[0]

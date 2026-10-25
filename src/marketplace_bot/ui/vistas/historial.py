@@ -4,7 +4,7 @@ from pathlib import Path
 
 import flet as ft
 
-from ...registros import ACCIONES, leer_corridas
+from ...registros import ACCIONES, leer_corridas, usuario_actual
 from .. import tema
 from .hoy import fecha_bonita
 
@@ -43,7 +43,8 @@ class VistaHistorial:
             mensaje = c.get("mensaje_borrar") or c.get("mensaje") or ""
             registro = Path(c["carpeta"]) / "registro.txt"
             tarjetas.append(ft.ExpansionTile(
-                title=ft.Text(f"{ACCIONES.get(c['accion'], c['accion'])} · {fecha_bonita(inicio)}, {inicio:%H:%M}",
+                title=ft.Text(f"{ACCIONES.get(c['accion'], c['accion'])} · {fecha_bonita(inicio)}, {inicio:%H:%M}"
+                              + (f" · {c['usuario']}" if c.get("usuario") not in (None, usuario_actual()) else ""),
                               weight=ft.FontWeight.W_600),
                 subtitle=ft.Row(chips, spacing=6, wrap=True),
                 bgcolor=tema.TARJETA, collapsed_bgcolor=tema.TARJETA,
@@ -58,6 +59,6 @@ class VistaHistorial:
         if not tarjetas:
             tarjetas = [ft.Text("Todavía no hay corridas con la versión nueva.", color=tema.TENUE)]
         return ft.Column([
-            tema.titulo("Historial", "Lo que pasó cada vez, artículo por artículo. Se guarda solo en esta PC."),
+            tema.titulo("Historial", "Lo que pasó cada vez, artículo por artículo. Con git también llega lo de las otras PCs."),
             ft.Column(tarjetas, spacing=10, scroll=ft.ScrollMode.AUTO, expand=True),
         ], expand=True, spacing=16)

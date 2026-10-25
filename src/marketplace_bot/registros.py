@@ -6,7 +6,9 @@ Cada vez que el bot trabaja se crea una carpeta en registros/ con:
   *.png          las capturas de pantalla de los fallos
 
 Ademas se sigue escribiendo ultimo_registro.txt en la carpeta del proyecto.
-registros/ no se sube a git: cada PC tiene su propio historial.
+Las carpetas de registros/ SI se suben a git (llevan el nombre de quien corrio
+el bot), asi las capturas de los fallos de otras PCs llegan con un git pull.
+Solo registros/historial.csv queda en cada PC.
 """
 import csv
 import json
@@ -17,6 +19,16 @@ from pathlib import Path
 
 from .modelos import Resultado
 
+def usuario_actual():
+    return os.environ.get("USERNAME") or os.environ.get("USER", "") or "pc"
+
+
+def nombre_corrida(inicio, accion):
+    """2026-10-25_111328_borrar_sarit: unica por PC y dice de quien es."""
+    usuario = "".join(c for c in usuario_actual() if c.isalnum() or c in "-_") or "pc"
+    return f"{inicio:%Y-%m-%d_%H%M%S}_{accion}_{usuario}"
+
+
 ACCIONES = {"publicar": "Publicar", "probar": "Prueba", "borrar": "Borrar", "borrar_y_publicar": "Borrar y publicar"}
 
 
@@ -26,7 +38,7 @@ class Corrida:
         self.accion = accion
         self.inicio = datetime.now()
         self.fin = None
-        self.carpeta = rutas.registros / f"{self.inicio:%Y-%m-%d_%H%M%S}_{accion}"
+        self.carpeta = rutas.registros / nombre_corrida(self.inicio, accion)
         self.carpeta.mkdir(parents=True, exist_ok=True)
         self.resultados = {r.carpeta: r for r in articulos}
         self.borradas = 0
@@ -70,6 +82,7 @@ class Corrida:
     def guardar(self):
         datos = {
             "accion": self.accion,
+            "usuario": usuario_actual(),
             "inicio": self.inicio.isoformat(timespec="seconds"),
             "fin": self.fin.isoformat(timespec="seconds") if self.fin else None,
             "borradas": self.borradas,
@@ -92,7 +105,7 @@ def anotar_historial(corrida):
     """Una linea por articulo en registros/historial.csv (con el resultado real)."""
     archivo = corrida.rutas.registros / "historial.csv"
     nuevo = not archivo.exists()
-    usuario = os.environ.get("USERNAME") or os.environ.get("USER", "")
+    usuario = usuario_actual()
     fecha = f"{corrida.inicio:%Y-%m-%d %H:%M}"
     try:
         with open(archivo, "a", encoding="utf-8", newline="") as f:
@@ -107,8 +120,9 @@ def anotar_historial(corrida):
         pass
 
 
-def leer_corridas(rutas, limite=50):
-    """Las ultimas corridas, la mas nueva primero."""
+def leer_corridas(rutas, limite=50, solo_mias=False):
+    """Las ultimas corridas, la mas nueva primero. `solo_mias` deja fuera las que
+    llegaron de otras PCs por git."""
     if not rutas.registros.exists():
         return []
     corridas = []
@@ -119,6 +133,8 @@ def leer_corridas(rutas, limite=50):
         try:
             datos = json.loads(resumen.read_text(encoding="utf-8"))
         except (OSError, ValueError):
+            continue
+        if solo_mias and datos.get("usuario", usuario_actual()) != usuario_actual():
             continue
         datos["carpeta"] = str(carpeta)
         datos["resultados"] = [Resultado(**r) for r in datos.get("resultados", [])]

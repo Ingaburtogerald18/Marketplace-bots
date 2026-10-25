@@ -70,7 +70,9 @@ def main(argv=None):
 
     ajustes = config.Ajustes.cargar()
     rutas = config.Rutas(ajustes)
-    registro = Path(args.registro) if args.registro else rutas.registros / f"{datetime.now():%Y-%m-%d_%H%M%S}_{args.accion}"
+    from ..registros import nombre_corrida
+
+    registro = Path(args.registro) if args.registro else rutas.registros / nombre_corrida(datetime.now(), args.accion)
     registro.mkdir(parents=True, exist_ok=True)
     ventana = args.ventana if args.ventana is not None else ajustes.ventana
 

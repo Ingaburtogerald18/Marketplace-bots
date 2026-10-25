@@ -116,3 +116,14 @@ def test_lo_que_dice_la_barrita(rutas):
     corrida.progreso = (2, 2, 1)
     estado = estado_barrita(corrida)
     assert estado["titulo"] == "2 de 2 · KZ" and estado["valor"] == 0.5 and estado["detalle"].startswith("1 bien")
+
+
+def test_las_corridas_llevan_el_usuario_y_se_filtran(rutas, monkeypatch):
+    monkeypatch.setenv("USERNAME", "sarit")
+    Corrida(rutas, "borrar", []).terminar()
+    monkeypatch.setenv("USERNAME", "Gerald")
+    mia = Corrida(rutas, "borrar", [])
+    mia.terminar()
+    assert mia.carpeta.name.endswith("_borrar_Gerald")
+    assert len(leer_corridas(rutas)) == 2
+    assert [c["usuario"] for c in leer_corridas(rutas, solo_mias=True)] == ["Gerald"]

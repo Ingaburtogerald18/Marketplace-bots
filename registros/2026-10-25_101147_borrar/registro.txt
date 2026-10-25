@@ -1,0 +1,28 @@
+2026-10-25 10:11 · Borrar
+Pongo al frente: Facebook and 2 more pages - Work - Microsoft Edge
+   borrar/compartir: encontrado en 1.5 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 1:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.9 s
+   borrar/confirmar: encontrado en 0.5 s
+   Borrada. Total: 1
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 2:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-25_101147_borrar/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 2:
+   borrar/opciones: encontrado en 0.0 s
+   borrar/eliminar: encontrado en 0.8 s
+   borrar/confirmar: encontrado en 0.5 s
+   Borrada. Total: 2
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 3:
+   borrar/opciones: encontrado en 0.0 s
+⏹ Lo detuviste.
