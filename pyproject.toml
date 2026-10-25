@@ -1,0 +1,34 @@
+[project]
+name = "marketplace-bot"
+version = "2.0.0"
+description = "Publica y borra tus artículos de Facebook Marketplace desde tu navegador ya abierto."
+requires-python = ">=3.12"
+dependencies = [
+    "pyautogui>=0.9.54",
+    "pygetwindow>=0.0.9",
+    "pyperclip>=1.8",
+    "opencv-python>=4.10",
+    "numpy>=2.0",
+    "pillow>=10.0",
+    "pillow-heif>=0.18",
+    "flet[desktop]==1.0.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+exe = ["flet-cli==1.0.5", "pyinstaller>=6.10"]
+
+[project.scripts]
+marketplace-bot = "marketplace_bot.__main__:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP"]

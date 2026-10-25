@@ -1,0 +1,4 @@
+titulo: Pantalla F92 CarPlay y Android Auto para moto
+precio: 2200
+categoria: Varios
+estado: Nuevo

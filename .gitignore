@@ -1,5 +1,12 @@
 __pycache__/
 .venv/
+.pytest_cache/
+.ruff_cache/
+registros/
+build/
+dist/
+*.spec
+ultimo_registro.txt
 error_*.png
 falta_*.png
-ultimo_registro.txt
+_respaldo_v1/

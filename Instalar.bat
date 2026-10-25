@@ -7,6 +7,8 @@ if not exist "%VENV%\Scripts\python.exe" (
 )
 "%VENV%\Scripts\python.exe" -m pip install --upgrade pip
 "%VENV%\Scripts\python.exe" -m pip install -r requirements.txt || (echo Algo fallo al instalar. Mandame lo de arriba. & pause & exit /b 1)
+echo Descargando la ventana nueva (solo la primera vez, puede tardar un poco)...
+"%VENV%\Scripts\python.exe" -c "import flet_desktop; flet_desktop.ensure_client_cached()"
 rem Guardamos que version se instalo, para reinstalar solo si cambia.
 copy /y requirements.txt "%VENV%\requirements.txt" >nul
 echo.

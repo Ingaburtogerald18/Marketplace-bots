@@ -1,0 +1,4 @@
+titulo: Pantalla F92 CarPlay y Android Auto para moto + DVR y 2 cámaras
+precio: 3700
+categoria: Electrónica e informática
+estado: Nuevo

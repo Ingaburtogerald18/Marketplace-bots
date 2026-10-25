@@ -1,0 +1,4 @@
+titulo: Combo KZ AZ10 + KZ EDX Pro X | Audífonos True Wireless
+precio: 1600
+categoria: Electrónica e informática
+estado: Nuevo
