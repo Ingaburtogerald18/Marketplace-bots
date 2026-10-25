@@ -19,6 +19,10 @@ def fecha_bonita(fecha):
     return f"{DIAS[fecha.weekday()]} {fecha.day} de {MESES[fecha.month - 1]}"
 
 
+
+def cuantas_borrar(ajustes):
+    return f"hasta {ajustes.max_borrar} publicaciones" if ajustes.max_borrar else "todas tus publicaciones"
+
 class VistaHoy:
     def __init__(self, app):
         self.app = app
@@ -59,7 +63,7 @@ class VistaHoy:
                                  shape=ft.RoundedRectangleBorder(radius=14)),
             on_click=lambda e: app.preguntar(
                 "Renovar publicaciones",
-                f"Voy a borrar hasta {app.ajustes.max_borrar} publicaciones y luego publicar {n}.\n\n"
+                f"Voy a borrar {cuantas_borrar(app.ajustes)} y luego publicar {n}.\n\n"
                 "Mientras trabajo no toqués el mouse ni el teclado. Para detenerme, llevá el mouse a una esquina.",
                 "Empezar", lambda: app.empezar("borrar_y_publicar")),
             disabled=n == 0,
@@ -79,7 +83,7 @@ class VistaHoy:
             ft.Container(width=8),
             secundario("Solo publicar", ft.Icons.UPLOAD, "publicar", f"¿Publicar {n} artículo(s) sin borrar nada?"),
             secundario("Solo borrar", ft.Icons.DELETE_SWEEP_OUTLINED, "borrar",
-                       f"¿Borrar hasta {app.ajustes.max_borrar} publicaciones de Marketplace?", peligro=True),
+                       f"¿Borrar {cuantas_borrar(app.ajustes)} de Marketplace?", peligro=True),
             secundario("Probar sin publicar", ft.Icons.SCIENCE_OUTLINED, "probar"),
         ], wrap=True, spacing=10, run_spacing=10), padding=20)
 

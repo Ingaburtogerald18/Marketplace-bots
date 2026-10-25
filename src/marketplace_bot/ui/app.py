@@ -5,7 +5,6 @@ nunca mueve el mouse: le pide al Ejecutor que corra el motor y muestra lo que
 va pasando.
 """
 import os
-import sys
 
 import flet as ft
 
@@ -29,15 +28,7 @@ def abrir(ruta):
         pass
 
 
-def ancho_pantalla():
-    if sys.platform == "win32":
-        try:
-            import ctypes
-
-            return ctypes.windll.user32.GetSystemMetrics(0)
-        except Exception:  # noqa: BLE001
-            pass
-    return 1920
+MIN_ANCHO, MIN_ALTO = 1000, 680  # tamaño minimo de la ventana normal
 
 
 class App:
@@ -57,7 +48,7 @@ class App:
         self.plantillas = []
         self.ejecutor = Ejecutor(self.rutas, self.ajustes, al_linea=self._al_linea,
                                  al_cambio=self._al_cambio, al_terminar=self._al_terminar)
-        self._geometria = None
+        self._trabajando = False
         self.recargar_plantillas()
 
         page.title = "Marketplace bot"
@@ -66,7 +57,7 @@ class App:
         page.bgcolor = tema.FONDO
         page.padding = 0
         page.window.width, page.window.height = 1320, 860
-        page.window.min_width, page.window.min_height = 1000, 680
+        page.window.min_width, page.window.min_height = MIN_ANCHO, MIN_ALTO
 
         self.vistas = {
             "hoy": VistaHoy(self),
@@ -178,33 +169,21 @@ class App:
         self.ejecutor.detener()
 
     def _modo_trabajo(self, activo):
+        # Mientras trabaja la ventana se minimiza para no tapar Facebook. La barrita de
+        # progreso es una ventanita aparte (barrita_tk.py) que queda sobre la barra de
+        # direcciones del navegador.
         ventana = self.page.window
+        self._trabajando = activo
         if activo:
             self.ir("hoy")
+            ventana.minimized = True
+            self.page.update()
             if self.ajustes.barrita_progreso:
-                self._geometria = (ventana.width, ventana.height, ventana.left, ventana.top, ventana.maximized)
-                ventana.maximized = False
-                ventana.width, ventana.height = BarritaProgreso.ANCHO, BarritaProgreso.ALTO
-                ventana.left = max(0, (ancho_pantalla() - BarritaProgreso.ANCHO) // 2)
-                ventana.top = 0
-                ventana.always_on_top = True
-                ventana.title_bar_hidden = True
-                self.page.controls[:] = [self.barrita.construir()]
-            else:
-                ventana.minimized = True
-        else:
-            if self._geometria:
-                ancho, alto, izq, arriba, maximizada = self._geometria
-                ventana.always_on_top = False
-                ventana.title_bar_hidden = False
-                ventana.width, ventana.height = ancho, alto
-                if izq is not None and arriba is not None:
-                    ventana.left, ventana.top = izq, arriba
-                ventana.maximized = bool(maximizada)
-                self._geometria = None
-            ventana.minimized = False
-            self.page.controls[:] = [self.principal]
-            self.ir("hoy")
+                self.barrita.abrir()
+            return
+        self.barrita.cerrar()
+        ventana.minimized = False
+        self.ir("hoy")
         self.page.update()
 
     # Estas tres las llama el Ejecutor desde otro hilo: pasamos al hilo de la ventana.
@@ -218,7 +197,7 @@ class App:
         self.page.run_task(self._terminado, corrida)
 
     async def _actualizar(self):
-        if self._geometria:
+        if self._trabajando:
             self.barrita.refrescar()
         elif self.actual == "hoy":
             self.vistas["hoy"].refrescar()

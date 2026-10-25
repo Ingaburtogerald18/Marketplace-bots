@@ -160,12 +160,12 @@ class Vision:
                     cajas.append(caja)
         return sorted(cajas, key=lambda c: (c.y, c.x))
 
-    def esperar(self, nombre, zona=None, espera=6.0, mientras=None, decir=True):
+    def esperar(self, nombre, zona=None, espera=6.0, mientras=None, decir=True, parecido=None):
         """Mira la pantalla hasta `espera` segundos. `mientras` se llama entre
         miradas (por ejemplo, para bajar la pagina)."""
         inicio = time.time()
         while True:
-            caja = self.buscar(nombre, zona)
+            caja = self.buscar(nombre, zona, parecido=parecido)
             if caja:
                 if decir:
                     print(f"   {nombre}: encontrado en {time.time() - inicio:.1f} s", flush=True)
@@ -179,6 +179,15 @@ class Vision:
         if decir:
             print(f"   {nombre}: no lo encontré en {espera:.0f} s", flush=True)
         return None
+
+    def esperar_que_se_vaya(self, nombre, zona=None, espera=6.0):
+        """Espera a que el boton desaparezca. Devuelve True si se fue."""
+        limite = time.time() + espera
+        while time.time() < limite:
+            if not self.buscar(nombre, zona):
+                return True
+            time.sleep(0.3)
+        return False
 
     def esperar_alguno(self, nombres, zona=None, espera=6.0):
         """Espera a que aparezca cualquiera de los botones. Devuelve (nombre, caja)."""

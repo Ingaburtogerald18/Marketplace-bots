@@ -97,10 +97,29 @@ def _al_frente(hwnd):
     return user32.GetForegroundWindow() == hwnd
 
 
+TITULO_BOT = "Marketplace bot"  # la ventana principal (ui/app.py); la barrita se llama distinto
+
+
+def apartar_ventana_del_bot(ventanas):
+    """Minimiza la ventana principal del bot si quedo abierta encima de Facebook.
+
+    25 de octubre: la ventana quedo grande en el centro y tapo el aviso
+    «Eliminar», asi que el motor se asegura por su cuenta.
+    """
+    for ventana in ventanas:
+        if _titulo(ventana) == TITULO_BOT and not getattr(ventana, "isMinimized", False):
+            try:
+                ventana.minimize()
+                print("Minimicé la ventana del bot para que no tape Facebook.", flush=True)
+            except Exception:  # noqa: BLE001
+                pass
+
+
 def preparar(url, filtro=""):
     """Deja Facebook al frente. Si no hay ventana elegida y Windows no deja
     traerla, abre la pagina con el navegador predeterminado."""
     ventanas = _ventanas()
+    apartar_ventana_del_bot(ventanas)
     try:
         ventana, aviso = elegir(ventanas, filtro)
     except NavegadorNoEncontrado:

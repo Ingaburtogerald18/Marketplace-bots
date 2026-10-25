@@ -26,6 +26,8 @@ URL_CREAR = "https://www.facebook.com/marketplace/create/item"
 LADO_MAXIMO = 1600
 
 
+VENTANA_ABRIR = ("Abrir", "Open")  # la ventana de Windows para elegir archivos
+
 class FaltaBoton(Exception):
     pass
 
@@ -64,13 +66,14 @@ class PublicarBot:
         self.max_grupos = max_grupos
         self.reducir_fotos = reducir_fotos
         self.formulario = None  # punto dentro del formulario donde se usa la rueda
+        self.fotos_listas = 0  # hora a partir de la cual las fotos ya deberian estar subidas
         self.formulario_a_medias = False
 
     # ---------- ayudas ----------
     def _bajar(self):
         if self.formulario:
             self.acciones.rueda(self.formulario, -200)
-            time.sleep(0.6)
+            time.sleep(0.4)
         else:
             time.sleep(0.3)
 
@@ -85,7 +88,7 @@ class PublicarBot:
     def clic(self, nombre, **kwargs):
         caja = self.buscar(nombre, **kwargs)
         self.acciones.clic(caja)
-        self.acciones.pausa()
+        self.acciones.pausa(0.3, 0.6)
         return caja
 
     def escribir(self, campo, texto):
@@ -98,13 +101,19 @@ class PublicarBot:
         carpeta = self.carpeta_subidas / plantilla.nombre
         nombres = preparar_fotos(plantilla.fotos, carpeta, self.reducir_fotos)
         self.clic("crear/agregar_fotos", espera=15)
-        time.sleep(2)  # que abra la ventana "Abrir" de Windows
+        # Esperamos a que se abra la ventana "Abrir" de Windows en vez de 2 s fijos.
+        if not self.acciones.esperar_ventana(VENTANA_ABRIR, espera=6):
+            time.sleep(1.5)
         self.acciones.pegar(str(carpeta))
         self.acciones.tecla("enter")
-        time.sleep(1.5)
+        time.sleep(0.8)
         self.acciones.pegar(" ".join(f'"{n}"' for n in nombres))
         self.acciones.tecla("enter")
-        time.sleep(3 + (1.2 if self.reducir_fotos else 2) * len(nombres))  # tiempo para que suban
+        self.acciones.esperar_ventana(VENTANA_ABRIR, abierta=False, espera=6)
+        # Las fotos terminan de subir mientras llenamos lo demas; antes de "Siguiente"
+        # nos aseguramos de que haya pasado al menos este tiempo.
+        self.fotos_listas = time.time() + 2 + (0.8 if self.reducir_fotos else 1.6) * len(nombres)
+        time.sleep(1)
 
     def elegir_opcion(self, campo, subcarpeta, valor):
         abierto = self.clic(campo, bajando=True)
@@ -116,7 +125,7 @@ class PublicarBot:
 
         def bajar_lista():
             self.acciones.rueda(lista, -200)
-            time.sleep(0.6)
+            time.sleep(0.4)
 
         self.clic(f"crear/{subcarpeta}/{valor}", espera=12, mientras=bajar_lista)
 
@@ -144,19 +153,31 @@ class PublicarBot:
             casillas = self.vision.buscar_todas("crear/casilla", parecido=0.9)
             sin_nuevos = 0 if casillas else sin_nuevos + 1
             for caja in casillas:
-                self.acciones.mover(caja, 0.2)
+                self.acciones.mover(caja, 0.08)
                 self.acciones.pyautogui.click()
                 marcados += 1
-                time.sleep(0.4)
+                time.sleep(0.15)
                 if marcados >= self.max_grupos:
                     break
             self.acciones.rueda(self.formulario, -300)
-            time.sleep(0.8)
+            time.sleep(0.5)
         eventos.decir(f"   Grupos marcados: {marcados}")
         return marcados
 
+    def pasar_a_grupos(self):
+        """Clic en "Siguiente" hasta que la pantalla cambie (si las fotos no habian
+        terminado de subir, Facebook todavia no deja pasar)."""
+        for _ in range(4):
+            self.clic("crear/siguiente", espera=15, bajando=True)
+            if self.vision.esperar_que_se_vaya("crear/siguiente", espera=5):
+                self.acciones.pausa(0.8, 1.2)  # que carguen los grupos
+                return
+            eventos.decir("   «Siguiente» sigue en pantalla; espero y pruebo otra vez.")
+        raise FaltaBoton("Di clic en «Siguiente» y la página no avanzó")
+
     def publicar_uno(self, plantilla, confirmar):
         eventos.decir(f"Artículo: {plantilla.titulo} ({len(plantilla.fotos)} fotos)")
+        eventos.paso("Abriendo «Crear publicación»")
         self.acciones.ir_a(URL_CREAR)
         titulo = self.vision.esperar("crear/titulo", espera=20)  # tambien espera a que cargue
         if not titulo and self.formulario_a_medias:
@@ -172,17 +193,27 @@ class PublicarBot:
         _, alto = self.acciones.tamano_pantalla()
         self.formulario = (titulo.x, int(alto * 0.55))
 
+        eventos.paso(f"Subiendo {len(plantilla.fotos)} fotos")
         self.subir_fotos(plantilla)
+        eventos.paso("Escribiendo título y precio")
         self.escribir("crear/titulo", plantilla.titulo)
         self.escribir("crear/precio", plantilla.precio)
+        eventos.paso(f"Categoría: {plantilla.categoria}")
         self.elegir_opcion("crear/categoria", "categorias", plantilla.categoria)
+        eventos.paso(f"Estado: {plantilla.estado}")
         self.elegir_opcion("crear/estado", "estados", plantilla.estado)
         if plantilla.descripcion:
+            eventos.paso("Pegando la descripción")
             self.poner_descripcion(plantilla.descripcion)
 
-        self.clic("crear/siguiente", espera=15, bajando=True)
-        self.acciones.pausa(2, 3)
+        faltan = self.fotos_listas - time.time()
+        if faltan > 0:
+            eventos.paso("Esperando que terminen de subir las fotos")
+            time.sleep(faltan)
+        self.pasar_a_grupos()
+        eventos.paso("Marcando grupos")
         grupos = self.marcar_grupos()
+        eventos.paso("Publicando" if confirmar else "Prueba: no publico")
 
         if not confirmar:
             boton = self.buscar("crear/publicar", espera=10)
@@ -190,10 +221,11 @@ class PublicarBot:
             eventos.decir("   MODO PRUEBA: aquí le daría clic a «Publicar». No publiqué nada.")
             return f"Prueba completa ({grupos} grupos)"
         # Si el boton sigue en pantalla despues del clic, no se publico: reintentamos.
+        # Esperamos a que desaparezca (antes eran 5 a 8 s fijos).
         for intento in range(3):
             self.clic("crear/publicar", espera=10)
-            self.acciones.pausa(5, 8)
-            if not self.vision.esperar("crear/publicar", espera=1, decir=False):
+            if self.vision.esperar_que_se_vaya("crear/publicar", espera=12):
+                self.acciones.pausa(1, 1.5)
                 eventos.decir("   Publicado.")
                 self.formulario_a_medias = False
                 return f"Publicado en {grupos} grupos"

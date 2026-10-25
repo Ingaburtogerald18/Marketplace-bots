@@ -16,10 +16,22 @@ from .motor import eventos
 from .registros import Corrida
 
 
-def comando_motor(*argumentos):
+def comando_propio(*argumentos):
     if config.CONGELADO:  # el .exe se llama a si mismo
-        return [sys.executable, "motor", *argumentos]
-    return [sys.executable, "-u", "-m", "marketplace_bot", "motor", *argumentos]
+        return [sys.executable, *argumentos]
+    return [sys.executable, "-u", "-m", "marketplace_bot", *argumentos]
+
+
+def comando_motor(*argumentos):
+    return comando_propio("motor", *argumentos)
+
+
+def entorno_python():
+    entorno = {**os.environ, "PYTHONIOENCODING": "utf-8"}
+    if not config.CONGELADO:
+        src = str(Path(__file__).resolve().parents[1])
+        entorno["PYTHONPATH"] = src + os.pathsep + entorno.get("PYTHONPATH", "")
+    return entorno
 
 
 class Ejecutor:
@@ -85,10 +97,7 @@ class Ejecutor:
 
     def _trabajar(self, corrida, pasos):
         mensaje = ""
-        entorno = {**os.environ, "PYTHONIOENCODING": "utf-8"}
-        if not config.CONGELADO:
-            src = str(Path(__file__).resolve().parents[1])
-            entorno["PYTHONPATH"] = src + os.pathsep + entorno.get("PYTHONPATH", "")
+        entorno = entorno_python()
         try:
             for paso in pasos:
                 if self.detenido:
@@ -131,6 +140,8 @@ class Ejecutor:
                               detalle=evento.get("detalle", ""), captura=evento.get("captura", ""))
             if "indice" in evento:
                 corrida.progreso = (evento["indice"], evento["total"], evento.get("ronda", 1))
+        elif tipo == "paso":
+            corrida.paso = evento.get("texto", "")
         elif tipo == "borrada":
             corrida.borradas = evento["total"]
         elif tipo == "fin_borrar":

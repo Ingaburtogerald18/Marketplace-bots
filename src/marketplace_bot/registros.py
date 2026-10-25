@@ -32,6 +32,7 @@ class Corrida:
         self.borradas = 0
         self.mensaje_borrar = ""
         self.mensaje_final = ""
+        self.paso = ""  # lo que el motor esta haciendo ahora
         self.progreso = (0, len(self.resultados), 1)  # (articulo actual, total, ronda)
         encabezado = f"{self.inicio:%Y-%m-%d %H:%M} · {ACCIONES.get(accion, accion)}\n"
         self._escribir_archivo(self.carpeta / "registro.txt", encabezado, "w")

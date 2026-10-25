@@ -41,9 +41,10 @@ class Ajustes:
     pausa_max: int = 10
     reintentar_fallidos: bool = True
     reducir_fotos: bool = True       # sube las fotos a 1600 px: mas rapido
-    max_borrar: int = 20
+    max_borrar: int = 0              # 0 = todas
     barrita_progreso: bool = True    # ventanita arriba mientras trabaja
     escala: float = 0                # escala de Windows que el bot detecto (0 = no se sabe)
+    version: int = 2                 # para cambiar valores viejos cuando cambia un valor por defecto
 
     @classmethod
     def cargar(cls):
@@ -51,6 +52,11 @@ class Ajustes:
             datos = json.loads(ARCHIVO_AJUSTES.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             datos = {}
+        if datos and datos.get("version", 1) < 2:
+            # Antes el maximo a borrar era 20 por defecto; ahora son todas.
+            if datos.get("max_borrar") == 20:
+                datos["max_borrar"] = 0
+            datos["version"] = 2
         validos = {f.name for f in fields(cls)}
         return cls(**{k: v for k, v in datos.items() if k in validos})
 

@@ -93,7 +93,7 @@ class VistaAjustes:
             ], spacing=12)),
             tema.tarjeta(ft.Column([
                 tema.seccion("Al borrar y mientras trabaja"),
-                numero("Máximo a borrar por vez", "max_borrar", 220, minimo=1),
+                numero("Máximo a borrar por vez (0 = todas)", "max_borrar", 260, minimo=0),
                 ft.Switch(label="Mostrar una barrita de progreso arriba de la pantalla (si no, la ventana se minimiza)",
                           value=a.barrita_progreso, on_change=lambda e: guardar(barrita_progreso=e.control.value)),
                 ft.Row([ft.Text(f"Tamaño de pantalla detectado: {escala}", color=tema.TENUE),

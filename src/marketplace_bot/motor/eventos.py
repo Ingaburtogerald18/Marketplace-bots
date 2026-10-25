@@ -7,12 +7,20 @@ empiezan con PREFIJO, que llevan un evento en JSON para la ventana.
 import json
 import os
 import sys
+import time
 
 PREFIJO = "@@evento "
+_inicio = time.time()
 
 
 def emitir(tipo, **datos):
     print(PREFIJO + json.dumps({"tipo": tipo, **datos}, ensure_ascii=False), flush=True)
+
+
+def paso(texto):
+    """Lo que el bot esta haciendo ahora, en pocas palabras, para la barrita."""
+    emitir("paso", texto=texto)
+    print(f"   [{time.time() - _inicio:6.1f} s] {texto}", flush=True)  # para medir cuanto tarda cada paso
 
 
 def decir(texto):

@@ -89,3 +89,30 @@ def test_ejecutor_entiende_los_eventos(rutas, capsys):
     assert corrida.resultados["kz"].estado == "publicado"
     assert corrida.progreso == (1, 1, 1)
     assert "Texto normal" in (corrida.carpeta / "registro.txt").read_text(encoding="utf-8")
+
+
+def test_la_barrita_sabe_que_paso_esta_haciendo(rutas, capsys):
+    ejecutor = Ejecutor(rutas, Ajustes())
+    corrida = Corrida(rutas, "borrar", [])
+    eventos.paso("Confirmando")
+    for linea in capsys.readouterr().out.splitlines(keepends=True):
+        ejecutor._linea(corrida, linea)
+    assert corrida.paso == "Confirmando"
+
+
+def test_lo_que_dice_la_barrita(rutas):
+    from marketplace_bot.ui.vistas.progreso import estado_barrita
+
+    corrida = Corrida(rutas, "borrar", [])
+    corrida.paso = "Confirmando"
+    estado = estado_barrita(corrida)
+    assert estado["titulo"] == "Borrando publicaciones viejas" and estado["paso"] == "Confirmando"
+    corrida.borradas = 3
+    assert "3 borradas" in estado_barrita(corrida)["titulo"]
+
+    corrida = Corrida(rutas, "publicar", [Resultado("a", "Mouse"), Resultado("b", "KZ")])
+    corrida.resultado("a", estado="publicado")
+    corrida.resultado("b", estado="trabajando")
+    corrida.progreso = (2, 2, 1)
+    estado = estado_barrita(corrida)
+    assert estado["titulo"] == "2 de 2 · KZ" and estado["valor"] == 0.5 and estado["detalle"].startswith("1 bien")

@@ -137,3 +137,103 @@ def test_eventos_ida_y_vuelta(capsys):
     assert texto is None and evento["titulo"] == "🎧 KZ"
     assert eventos.leer_linea("hola\n") == (None, "hola\n")
     assert json.loads('{"a": 1}') == {"a": 1}
+
+
+def test_espera_que_la_pagina_deje_de_moverse(acciones, tmp_path):
+    """25 de octubre: un aviso cargó arriba y corrió todo; el bot buscó el "..." donde ya no estaba."""
+    quieta = Image.open("tests/capturas/borrar_publicacion.png").convert("RGB")
+    corrida = Image.new("RGB", quieta.size, (24, 25, 26))
+    corrida.paste(quieta.crop((0, 0, quieta.width, quieta.height - 60)), (0, 60))
+    vistas = [quieta, corrida, corrida]  # primero arriba, luego se corre 60 px y se queda
+    vision = Vision(BOTONES, capturar=lambda: vistas.pop(0) if len(vistas) > 1 else vistas[0])
+    estado, caja = BorrarBot(vision, acciones, tmp_path).esperar_pagina()
+    original = Vision(BOTONES, capturar=lambda: quieta).buscar("borrar/compartir")
+    assert estado == "hay" and caja.top - original.top == 60
+
+
+def test_si_falla_recarga_una_vez_y_sigue(acciones, tmp_path):
+    bot = BorrarBot(Vision(BOTONES, capturar=pantalla("borrar_publicacion")), acciones, tmp_path)
+    intentos = []
+
+    def borrar_una(compartir, confirmar):
+        intentos.append(1)
+        return len(intentos) != 2  # la segunda falla una vez
+
+    bot.borrar_una = borrar_una
+    borradas, ok, mensaje = bot.correr(confirmar=True, maximo=3)
+    assert (borradas, ok) == (3, True) and len(intentos) == 4
+    assert [h for h in acciones.hechas if h[0] == "tecla" and h[1][0] == "f5"]
+
+
+def test_minimiza_la_ventana_del_bot_si_tapa_facebook():
+    class V(Ventana):
+        isMinimized = False
+
+        def minimize(self):
+            self.isMinimized = True
+
+    bot, barrita, edge = V("Marketplace bot"), V("Marketplace bot - progreso"), V("Facebook - Microsoft Edge")
+    navegador.apartar_ventana_del_bot([bot, barrita, edge])
+    assert bot.isMinimized and not barrita.isMinimized and not edge.isMinimized
+
+
+def test_responde_vendiste_este_articulo(acciones, tmp_path):
+    """25 de octubre: Facebook pregunta "¿Vendiste este artículo?" antes de eliminar."""
+    vision = Vision(BOTONES, capturar=pantalla("borrar_vendiste"))
+    opcion = vision.buscar("borrar/motivo_prefiero_no_responder")
+    siguiente = vision.buscar("borrar/motivo_siguiente", parecido=0.75)
+    assert opcion and siguiente and siguiente.x > opcion.x and siguiente.y > opcion.y
+    # Despues del clic en "Siguiente" el cuadro desaparece.
+    vistas = {"actual": "borrar_vendiste"}
+    imagenes = {n: Image.open(f"tests/capturas/{n}.png").convert("RGB") for n in ("borrar_vendiste", "borrar_publicacion")}
+    vision.capturar = lambda: imagenes[vistas["actual"]]
+    clic_original = acciones.clic
+
+    def clic(punto):
+        clic_original(punto)
+        if punto == siguiente:
+            vistas["actual"] = "borrar_publicacion"
+
+    acciones.clic = clic
+    bot = BorrarBot(vision, acciones, tmp_path)
+    bot.zona_centro = lambda: None  # la captura es solo el cuadro
+    assert bot.responder_motivo(opcion)
+    clics = [h[1][0] for h in acciones.hechas if h[0] == "clic"]
+    assert clics[0][0] < opcion.left  # el circulito
+    assert clics[1] == siguiente
+
+
+def test_termina_solo_cuando_ya_no_queda_nada(acciones, tmp_path):
+    """25 de octubre: borró todas y se quedó esperando en vez de terminar."""
+    imagenes = {n: Image.open(f"tests/capturas/{n}.png").convert("RGB")
+                for n in ("borrar_publicacion", "borrar_confirmacion", "borrar_pagina_vacia")}
+    vista = {"actual": "borrar_publicacion"}
+    bot = BorrarBot(Vision(BOTONES, capturar=lambda: imagenes[vista["actual"]]), acciones, tmp_path)
+
+    def borrar_una(compartir, confirmar):
+        vista["actual"] = "borrar_confirmacion"  # lista vacia sin el mensaje: no hay "Compartir"
+        return True
+
+    tecla_original = acciones.tecla
+
+    def tecla(nombre):
+        tecla_original(nombre)
+        if nombre == "f5":
+            vista["actual"] = "borrar_pagina_vacia"
+
+    bot.borrar_una, acciones.tecla = borrar_una, tecla
+    borradas, ok, mensaje = bot.correr(confirmar=True)
+    assert (borradas, ok) == (1, True) and "No quedan" in mensaje
+
+
+def test_espera_que_un_boton_se_vaya():
+    vision = Vision(BOTONES, capturar=pantalla("borrar_publicacion"))
+    assert not vision.esperar_que_se_vaya("borrar/compartir", espera=0.5)
+    vacia = Image.new("RGB", (400, 300), (24, 25, 26))
+    assert Vision(BOTONES, capturar=lambda: vacia).esperar_que_se_vaya("borrar/compartir", espera=0.5)
+
+
+def test_el_registro_dice_cuanto_tarda_cada_paso(capsys):
+    eventos.paso("Marcando grupos")
+    salida = capsys.readouterr().out
+    assert '"paso"' in salida and " s] Marcando grupos" in salida

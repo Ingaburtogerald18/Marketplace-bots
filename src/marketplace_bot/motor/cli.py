@@ -1,6 +1,6 @@
 """Linea de comandos del motor. La ventana lo llama asi (tambien sirve a mano):
 
-    python -m marketplace_bot motor borrar --confirmar --max 20
+    python -m marketplace_bot motor borrar --confirmar --max 20   (sin --max: todas)
     python -m marketplace_bot motor publicar --solo kz-edx-pro attack-shark-r1 --confirmar
     python -m marketplace_bot motor ventanas
 
@@ -30,7 +30,7 @@ def _argumentos(argv):
     comunes.add_argument("--escala", type=float, default=None, help="escala de Windows ya conocida (1.25 = 125 %%)")
 
     borrar = sub.add_parser("borrar", parents=[comunes])
-    borrar.add_argument("--max", type=int, default=20, help="maximo a borrar por corrida")
+    borrar.add_argument("--max", type=int, default=0, help="maximo a borrar por corrida (0 = todas)")
 
     publicar = sub.add_parser("publicar", parents=[comunes])
     publicar.add_argument("--solo", nargs="+", required=True, help="carpetas de publicaciones/")
