@@ -237,3 +237,9 @@ def test_el_registro_dice_cuanto_tarda_cada_paso(capsys):
     eventos.paso("Marcando grupos")
     salida = capsys.readouterr().out
     assert '"paso"' in salida and " s] Marcando grupos" in salida
+
+
+def test_diagnostico_dice_lo_mas_parecido():
+    vision = Vision(BOTONES, capturar=pantalla("borrar_publicacion"), escala=1.5)
+    valor, tamano = vision.diagnostico("borrar/compartir")
+    assert valor > 0.95 and tamano == 1.0 and vision.escala == 1.5

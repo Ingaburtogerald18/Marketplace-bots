@@ -185,7 +185,12 @@ class PublicarBot:
             # preguntar "¿Salir de la pagina?". Enter elige "Salir".
             self.acciones.tecla("enter")
             titulo = self.vision.esperar("crear/titulo", espera=20)
+        if not titulo and self.vision.escala:
+            self.vision.escala = None  # por si el tamano guardado de esta PC ya no sirve
+            titulo = self.vision.esperar("crear/titulo", espera=8)
         if not titulo:
+            valor, tamano = self.vision.diagnostico("crear/titulo")
+            eventos.decir(f"   Lo más parecido a «titulo»: {valor:.0%} (tamaño {tamano:.0%})")
             raise FaltaBoton("No cargó la página para crear el artículo")
         self.formulario_a_medias = True
         # La rueda se usa en el centro del panel del formulario (a la altura del

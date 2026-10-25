@@ -43,6 +43,15 @@ def _argumentos(argv):
     return parser.parse_args(argv)
 
 
+def escala_windows():
+    try:
+        import ctypes
+
+        return ctypes.windll.user32.GetDpiForSystem() / 96
+    except (AttributeError, OSError):
+        return 1.0
+
+
 def main(argv=None):
     eventos.configurar_salida()
     args = _argumentos(argv if argv is not None else sys.argv[1:])
@@ -67,6 +76,9 @@ def main(argv=None):
 
     vision = Vision(rutas.botones, escala=args.escala)
     acciones = Acciones()
+    ancho, alto = acciones.tamano_pantalla()
+    eventos.decir(f"Pantalla: {ancho}x{alto} · escala de Windows: {escala_windows():.0%}"
+                  + (f" · tamaño guardado: {args.escala:.0%}" if args.escala else ""))
     escala_inicial = vision.escala
     try:
         if args.accion == "borrar":

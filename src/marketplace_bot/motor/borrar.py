@@ -195,8 +195,13 @@ class BorrarBot:
             if estado is None:
                 if not recargue:
                     recargue = True
+                    self.vision.escala = None  # por si el tamano guardado de esta PC ya no sirve
                     self.recargar()
                     continue
+                for nombre in ("borrar/compartir", "borrar/vacio"):
+                    valor, tamano = self.vision.diagnostico(nombre)
+                    eventos.decir(f"   Lo más parecido a «{nombre.split('/')[-1]}»: {valor:.0%} "
+                                  f"(tamaño {tamano:.0%}; hace falta {self.vision.parecido:.0%})")
                 self._fallo("pagina")
                 return borradas, False, "No reconocí la página de tus publicaciones."
             if not confirmar:

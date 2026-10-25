@@ -22,7 +22,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageOps
 
-ESCALAS = (1.0, 1.25, 1.5, 1.1, 1.75, 0.9, 2.0)
+ESCALAS = (1.0, 1.25, 1.5, 1.1, 1.75, 0.9, 2.0, 0.8)  # 0.8: laptops con el zoom del navegador al 80-90 %
 PARECIDO = 0.85  # que tanto debe parecerse la pantalla al recorte (0 a 1)
 
 
@@ -143,6 +143,24 @@ class Vision:
                 print(f"   (tu pantalla esta al {e:.0%}, ajusto los tamaños)", flush=True)
             self.escala = e
         return caja
+
+    def diagnostico(self, nombre, zona=None):
+        """Lo mas parecido que hay en pantalla, en cualquier tamano: (parecido, tamano).
+        Sirve para el registro cuando algo no aparece."""
+        guardada, self.escala = self.escala, None
+        try:
+            color, gris, _ = self.pantalla(zona)
+            mejor = (0.0, 1.0)
+            for recorte, invertido, e in self._variantes(nombre):
+                fondo = gris if invertido else color
+                if recorte.shape[0] > fondo.shape[0] or recorte.shape[1] > fondo.shape[1]:
+                    continue
+                valor = float(cv2.minMaxLoc(cv2.matchTemplate(fondo, recorte, cv2.TM_CCOEFF_NORMED))[1])
+                if valor > mejor[0]:
+                    mejor = (valor, e)
+            return mejor
+        finally:
+            self.escala = guardada
 
     def buscar_todas(self, nombre, zona=None, parecido=0.9):
         """Todas las apariciones (por ejemplo, las casillas de los grupos)."""
