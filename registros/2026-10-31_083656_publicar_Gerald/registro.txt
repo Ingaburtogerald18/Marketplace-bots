@@ -1,0 +1,247 @@
+2026-10-31 08:36 · Publicar
+Pantalla: 1920x1080 · escala de Windows: 100% · tamaño guardado: 100%
+Pongo al frente: Facebook - Work - Microsoft Edge
+Artículo: Attack Shark R1 — Mouse Gaming Inalámbrico (3 fotos)
+   [   2.2 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 1.0 s
+   [   5.3 s] Subiendo 3 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [  10.3 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [  12.9 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [  18.9 s] Estado: Nuevo
+   crear/estado: encontrado en 1.1 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [  21.7 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.1 s
+   crear/siguiente: encontrado en 0.3 s
+   [  26.2 s] Marcando grupos
+   Grupos marcados: 15
+   [  34.1 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Audífonos Bluetooth T9 TWS — con pantalla LED (3 fotos)
+   [  46.0 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.1 s
+   [  50.2 s] Subiendo 3 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [  54.9 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [  57.9 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [  63.8 s] Estado: Nuevo
+   crear/estado: encontrado en 1.1 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [  66.8 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.1 s
+   crear/siguiente: encontrado en 0.3 s
+   [  71.3 s] Marcando grupos
+   Grupos marcados: 15
+   [  79.2 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: 🎮 ESTUCHE PROTECTOR PARA NINTENDO SWITCH / SWITCH OLED – C$700 🎮 (4 fotos)
+   [  89.3 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 1.5 s
+   [  92.8 s] Subiendo 4 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [  97.6 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [ 100.6 s] Categoría: Varios
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Varios: encontrado en 5.9 s
+   [ 108.3 s] Estado: Nuevo
+   crear/estado: encontrado en 1.1 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 110.9 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.1 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 115.4 s] Marcando grupos
+   Grupos marcados: 15
+   [ 123.2 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: KZ EDX Pro — Audífonos HiFi In-Ear (1 fotos)
+   [ 131.7 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 0.9 s
+   [ 134.8 s] Subiendo 1 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 139.3 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [ 142.4 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 148.0 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 150.0 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 155.1 s] Marcando grupos
+   Grupos marcados: 15
+   [ 163.0 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: KZ EDX Pro X — Audífonos HiFi In-Ear (2 fotos)
+   [ 170.5 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [ 174.6 s] Subiendo 2 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 179.6 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [ 182.5 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 188.4 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 190.4 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.8 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 195.7 s] Marcando grupos
+   Grupos marcados: 15
+   [ 203.6 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: 🎧 KZ EDX Pro X AL POR MAYOR (2 fotos)
+   [ 214.2 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [ 218.3 s] Subiendo 2 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 223.3 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [ 226.3 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 232.0 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 234.1 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 239.5 s] Marcando grupos
+   Grupos marcados: 15
+   [ 247.4 s] Publicando
+   crear/publicar: encontrado en 0.3 s
+   Publicado.
+Artículo: Micrófono Inalámbrico M9 — Lightning (6 fotos)
+   [ 256.3 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.1 s
+   [ 260.5 s] Subiendo 6 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 266.0 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [ 270.2 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 275.5 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.3 s
+   [ 277.4 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.8 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 283.1 s] Marcando grupos
+   Grupos marcados: 15
+   [ 291.0 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla F92 CarPlay y Android Auto para moto + DVR y 2 cámaras (8 fotos)
+   [ 301.7 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 0.9 s
+   [ 304.5 s] Subiendo 8 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 310.3 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [ 314.3 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 319.8 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 321.6 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 326.9 s] Marcando grupos
+   Grupos marcados: 15
+   [ 334.7 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla F92 CarPlay y Android Auto para moto (4 fotos)
+   [ 346.2 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [ 350.6 s] Subiendo 4 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 355.7 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [ 358.9 s] Categoría: Varios
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Varios: encontrado en 5.9 s
+   [ 366.2 s] Estado: Nuevo
+   crear/estado: encontrado en 1.1 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 369.1 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.1 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 373.4 s] Marcando grupos
+   Grupos marcados: 15
+   [ 381.2 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla M558 CarPlay y Android Auto para moto + DVR y 2 cámaras (8 fotos)
+   [ 389.6 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.8 s
+   [ 394.2 s] Subiendo 8 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 400.2 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [ 404.1 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 409.8 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 411.6 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 417.2 s] Marcando grupos
+   Grupos marcados: 15
+   [ 425.0 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla M558 CarPlay y Android Auto para moto (7 fotos)
+   [ 436.4 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [ 440.6 s] Subiendo 7 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 446.2 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [ 450.1 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 455.5 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 457.2 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 462.6 s] Marcando grupos
+   Grupos marcados: 15
+   [ 470.5 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+
+Terminé. Publicados: 11 de 11.

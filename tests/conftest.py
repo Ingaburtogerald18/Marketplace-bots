@@ -39,6 +39,12 @@ class AccionesFalsas:
     def pausa(self, *a):
         pass
 
+    def ventana_activa(self):
+        return ""
+
+    def esperar_ventana(self, *a, **k):
+        return True
+
     def captura(self, ruta, cajas=(), puntos=()):
         self.hechas.append(("captura", (str(ruta),)))
         return str(ruta)

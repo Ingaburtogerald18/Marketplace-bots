@@ -1,0 +1,39 @@
+2026-10-31 07:04 · Publicar
+Pantalla: 1920x1080 · escala de Windows: 100% · tamaño guardado: 100%
+⚠ Hay Facebook abierto en varios perfiles (Google Chrome, Work - Microsoft Edge). Uso el primero; elegí el correcto en Ajustes para no equivocarme de cuenta.
+Pongo al frente: Crear publicación | Facebook - Google Chrome
+Artículo: Attack Shark R1 — Mouse Gaming Inalámbrico (3 fotos)
+   [   2.2 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 3.9 s
+   [   8.1 s] Subiendo 3 fotos
+   crear/agregar_fotos: no lo encontré en 15 s
+   ✖ No encontré «agregar_fotos» en la pantalla. Guardé la captura y sigo con el siguiente.
+Artículo: Audífonos Bluetooth T9 TWS — con pantalla LED (3 fotos)
+   [  32.3 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 1.5 s
+   [  35.9 s] Subiendo 3 fotos
+   crear/agregar_fotos: no lo encontré en 15 s
+   ✖ No encontré «agregar_fotos» en la pantalla. Guardé la captura y sigo con el siguiente.
+Artículo: 🎮 ESTUCHE PROTECTOR PARA NINTENDO SWITCH / SWITCH OLED – C$700 🎮 (4 fotos)
+   [  61.3 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 1.5 s
+   [  64.9 s] Subiendo 4 fotos
+   crear/agregar_fotos: no lo encontré en 15 s
+   ✖ No encontré «agregar_fotos» en la pantalla. Guardé la captura y sigo con el siguiente.
+Artículo: KZ EDX Pro — Audífonos HiFi In-Ear (1 fotos)
+   [  89.1 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 1.5 s
+   [  92.5 s] Subiendo 1 fotos
+   crear/agregar_fotos: no lo encontré en 15 s
+   ✖ No encontré «agregar_fotos» en la pantalla. Guardé la captura y sigo con el siguiente.
+Artículo: KZ EDX Pro X — Audífonos HiFi In-Ear (2 fotos)
+   [ 115.3 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 0.9 s
+   [ 118.4 s] Subiendo 2 fotos
+   crear/agregar_fotos: no lo encontré en 15 s
+   ✖ No encontré «agregar_fotos» en la pantalla. Guardé la captura y sigo con el siguiente.
+Artículo: 🎧 KZ EDX Pro X AL POR MAYOR (2 fotos)
+   [ 140.7 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 0.9 s
+   [ 143.6 s] Subiendo 2 fotos
+⏹ Lo detuviste.

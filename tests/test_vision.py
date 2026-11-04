@@ -19,6 +19,8 @@ from marketplace_bot.motor.vision import Vision
     ("publicar_lista_estados", "crear/estados/Usado - Como nuevo", (106, 772)),
     ("publicar_lista_estados", "crear/estados/Usado - Buen estado", (104, 807)),
     ("publicar_lista_estados", "crear/estados/Usado - Aceptable", (96, 842)),
+    # 31 oct: otra cuenta con Facebook en español de España y modo claro dice «Añadir fotos»
+    ("publicar_anadir_fotos", "crear/agregar_fotos", (180, 442)),
 ])
 def test_encuentra_el_boton(vision_de, captura, boton, donde):
     caja = vision_de(captura).buscar(boton)

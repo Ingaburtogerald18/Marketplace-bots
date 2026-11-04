@@ -1,0 +1,292 @@
+2026-10-31 06:59 · Borrar
+Pantalla: 1920x1080 · escala de Windows: 100% · tamaño guardado: 100%
+⚠ Hay Facebook abierto en varios perfiles (Google Chrome, Work - Microsoft Edge). Uso el primero; elegí el correcto en Ajustes para no equivocarme de cuenta.
+Pongo al frente: Facebook - Google Chrome
+   [   2.2 s] Abriendo tus publicaciones
+   borrar/compartir: encontrado en 1.6 s
+   borrar/compartir: encontrado en 0.5 s
+Publicación 1:
+   [   6.7 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [   7.1 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.3 s
+   [   8.7 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 1
+   [  10.3 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.5 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 2:
+   [  12.1 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  12.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [  22.7 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 2:
+   [  27.3 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  27.6 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.6 s
+   [  29.5 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 2
+   [  30.9 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 3:
+   [  32.7 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  33.0 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [  43.3 s] Recargando la página
+   borrar/compartir: encontrado en 1.3 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 3:
+   [  48.7 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  48.8 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.3 s
+   [  50.4 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 3
+   [  52.0 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 4:
+   [  54.1 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  54.4 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [  64.5 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 4:
+   [  68.9 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  69.1 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.9 s
+   [  70.3 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 4
+   [  71.9 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 5:
+   [  73.7 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  74.0 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [  84.3 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 5:
+   [  88.9 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  89.2 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  90.4 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 5
+   [  91.7 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 6:
+   [  93.7 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  94.0 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 104.2 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 6:
+   [ 108.6 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 108.9 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.3 s
+   [ 110.5 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 6
+   [ 112.1 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 7:
+   [ 114.2 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 114.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 124.7 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 7:
+   [ 129.3 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 129.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.7 s
+   [ 131.4 s] Confirmando
+   borrar/confirmar: encontrado en 1.5 s
+   Borrada. Total: 7
+   [ 134.0 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 8:
+   [ 136.0 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 136.3 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 146.5 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 8:
+   [ 151.2 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 151.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.2 s
+   [ 153.0 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 8
+   [ 154.6 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 9:
+   [ 156.6 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 157.0 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 167.2 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 9:
+   [ 171.9 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 172.2 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.2 s
+   [ 173.7 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 9
+   [ 175.3 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 10:
+   [ 177.0 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 177.4 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 187.6 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 10:
+   [ 192.1 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 192.2 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.2 s
+   [ 193.8 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 10
+   [ 195.3 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 11:
+   [ 197.2 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 197.3 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 207.5 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 11:
+   [ 212.4 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 212.7 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.3 s
+   [ 214.1 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 11
+   [ 215.6 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 12:
+   [ 217.4 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 217.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 227.7 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 12:
+   [ 232.1 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 232.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.2 s
+   [ 234.0 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 12
+   [ 235.6 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 13:
+   [ 237.5 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 237.9 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 248.1 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 13:
+   [ 253.3 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 253.6 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.3 s
+   [ 255.2 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 13
+   [ 256.7 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 14:
+   [ 258.5 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 258.9 s] Buscando «Eliminar publicación»
+   borrar/eliminar: no lo encontré en 10 s
+   Guardé la captura C:\Users\Gerald\Desktop\Marketplace bots\registros\2026-10-31_065945_borrar_Gerald/fallo_borrar_eliminar.png: círculo = donde di clic, cuadro = donde busqué.
+   Recargo la página y pruebo otra vez.
+   [ 269.1 s] Recargando la página
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 14:
+   [ 274.1 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 274.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.2 s
+   [ 276.0 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 14
+   [ 277.6 s] Esperando que Facebook la quite de la lista
+   Recargo la página y pruebo otra vez.
+   [ 284.1 s] Recargando la página
+⏹ Lo detuviste.

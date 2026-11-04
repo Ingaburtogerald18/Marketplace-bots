@@ -1,0 +1,88 @@
+{
+  "accion": "publicar",
+  "usuario": "Gerald",
+  "inicio": "2026-10-31T07:04:38",
+  "fin": "2026-10-31T07:07:07",
+  "borradas": 0,
+  "mensaje": "Lo detuviste.",
+  "mensaje_borrar": "",
+  "resultados": [
+    {
+      "carpeta": "attack-shark-r1",
+      "titulo": "Attack Shark R1 — Mouse Gaming Inalámbrico",
+      "estado": "fallo",
+      "detalle": "No encontré «agregar_fotos» en la pantalla",
+      "captura": "C:\\Users\\Gerald\\Desktop\\Marketplace bots\\registros\\2026-10-31_070438_publicar_Gerald\\fallo_r1_01_attack-shark-r1.png"
+    },
+    {
+      "carpeta": "audifonos-bluetooth-t9-tws-con-pantalla-",
+      "titulo": "Audífonos Bluetooth T9 TWS — con pantalla LED",
+      "estado": "fallo",
+      "detalle": "No encontré «agregar_fotos» en la pantalla",
+      "captura": "C:\\Users\\Gerald\\Desktop\\Marketplace bots\\registros\\2026-10-31_070438_publicar_Gerald\\fallo_r1_02_audifonos-bluetooth-t9-tws-con-pantalla-.png"
+    },
+    {
+      "carpeta": "estuche-protector-para-nintendo-switch-s",
+      "titulo": "🎮 ESTUCHE PROTECTOR PARA NINTENDO SWITCH / SWITCH OLED – C$700 🎮",
+      "estado": "fallo",
+      "detalle": "No encontré «agregar_fotos» en la pantalla",
+      "captura": "C:\\Users\\Gerald\\Desktop\\Marketplace bots\\registros\\2026-10-31_070438_publicar_Gerald\\fallo_r1_03_estuche-protector-para-nintendo-switch-s.png"
+    },
+    {
+      "carpeta": "kz-edx-pro",
+      "titulo": "KZ EDX Pro — Audífonos HiFi In-Ear",
+      "estado": "fallo",
+      "detalle": "No encontré «agregar_fotos» en la pantalla",
+      "captura": "C:\\Users\\Gerald\\Desktop\\Marketplace bots\\registros\\2026-10-31_070438_publicar_Gerald\\fallo_r1_04_kz-edx-pro.png"
+    },
+    {
+      "carpeta": "kz-edx-pro-x",
+      "titulo": "KZ EDX Pro X — Audífonos HiFi In-Ear",
+      "estado": "fallo",
+      "detalle": "No encontré «agregar_fotos» en la pantalla",
+      "captura": "C:\\Users\\Gerald\\Desktop\\Marketplace bots\\registros\\2026-10-31_070438_publicar_Gerald\\fallo_r1_05_kz-edx-pro-x.png"
+    },
+    {
+      "carpeta": "kz-edx-pro-x-al-por-mayor",
+      "titulo": "🎧 KZ EDX Pro X AL POR MAYOR",
+      "estado": "fallo",
+      "detalle": "El bot se detuvo antes",
+      "captura": ""
+    },
+    {
+      "carpeta": "microfono-inalambrico-m9-lightning",
+      "titulo": "Micrófono Inalámbrico M9 — Lightning",
+      "estado": "saltado",
+      "detalle": "El bot se detuvo antes",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-f92-moto-con-dvr-y-camaras",
+      "titulo": "Pantalla F92 CarPlay y Android Auto para moto + DVR y 2 cámaras",
+      "estado": "saltado",
+      "detalle": "El bot se detuvo antes",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-f92-moto-sin-camaras",
+      "titulo": "Pantalla F92 CarPlay y Android Auto para moto",
+      "estado": "saltado",
+      "detalle": "El bot se detuvo antes",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-m558-moto-con-dvr-y-camaras",
+      "titulo": "Pantalla M558 CarPlay y Android Auto para moto + DVR y 2 cámaras",
+      "estado": "saltado",
+      "detalle": "El bot se detuvo antes",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-m558-moto-sin-dvr",
+      "titulo": "Pantalla M558 CarPlay y Android Auto para moto",
+      "estado": "saltado",
+      "detalle": "El bot se detuvo antes",
+      "captura": ""
+    }
+  ]
+}

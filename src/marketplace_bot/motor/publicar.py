@@ -104,16 +104,39 @@ class PublicarBot:
         # Esperamos a que se abra la ventana "Abrir" de Windows en vez de 2 s fijos.
         if not self.acciones.esperar_ventana(VENTANA_ABRIR, espera=6):
             time.sleep(1.5)
-        self.acciones.pegar(str(carpeta))
-        self.acciones.tecla("enter")
-        time.sleep(0.8)
-        self.acciones.pegar(" ".join(f'"{n}"' for n in nombres))
-        self.acciones.tecla("enter")
-        self.acciones.esperar_ventana(VENTANA_ABRIR, abierta=False, espera=6)
+        # 31 oct: con 0.8 s la ventana a veces seguia en la carpeta del articulo
+        # anterior y decia "File not found"; quedaba abierta y arruinaba los que
+        # seguian. Ahora esperamos mas y, si no se cierra, lo intentamos otra vez.
+        lista = " ".join(f'"{n}"' for n in nombres)
+        for intento in range(2):
+            self.acciones.atajo("ctrl", "a")  # por si quedo texto del intento anterior
+            self.acciones.pegar(str(carpeta))
+            self.acciones.tecla("enter")
+            time.sleep(1.5 + intento)
+            self.acciones.atajo("ctrl", "a")
+            self.acciones.pegar(lista)
+            self.acciones.tecla("enter")
+            if self.acciones.esperar_ventana(VENTANA_ABRIR, abierta=False, espera=6):
+                break
+            eventos.decir("   La ventana para elegir fotos no se cerró; lo intento otra vez.")
+            self.acciones.tecla("enter")  # cierra el aviso "File not found" si salio
+            time.sleep(0.5)
+        else:
+            self.cerrar_ventana_abrir()
+            raise FaltaBoton("No pude elegir las fotos en la ventana de Windows")
         # Las fotos terminan de subir mientras llenamos lo demas; antes de "Siguiente"
         # nos aseguramos de que haya pasado al menos este tiempo.
         self.fotos_listas = time.time() + 2 + (0.8 if self.reducir_fotos else 1.6) * len(nombres)
         time.sleep(1)
+
+    def cerrar_ventana_abrir(self):
+        """Si quedo abierta la ventana "Abrir" (o su aviso), la cierra con Esc
+        para que el siguiente articulo no escriba adentro de ella."""
+        for _ in range(3):
+            if self.acciones.ventana_activa() not in VENTANA_ABRIR:
+                return
+            self.acciones.tecla("esc")
+            time.sleep(0.5)
 
     def elegir_opcion(self, campo, subcarpeta, valor):
         abierto = self.clic(campo, bajando=True)
@@ -178,6 +201,7 @@ class PublicarBot:
     def publicar_uno(self, plantilla, confirmar):
         eventos.decir(f"Artículo: {plantilla.titulo} ({len(plantilla.fotos)} fotos)")
         eventos.paso("Abriendo «Crear publicación»")
+        self.cerrar_ventana_abrir()
         self.acciones.ir_a(URL_CREAR)
         titulo = self.vision.esperar("crear/titulo", espera=20)  # tambien espera a que cargue
         if not titulo and self.formulario_a_medias:

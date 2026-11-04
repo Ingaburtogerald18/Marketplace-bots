@@ -1,0 +1,176 @@
+2026-10-31 07:36 · Borrar
+Pantalla: 1920x1080 · escala de Windows: 100% · tamaño guardado: 100%
+Pongo al frente: Facebook - Work - Microsoft Edge
+   [   2.2 s] Abriendo tus publicaciones
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 2.4 s
+Publicación 1:
+   [   7.5 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [   7.6 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 1.2 s
+   [   9.2 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   [  10.5 s] Respondiendo «¿Vendiste este artículo?»
+   borrar/motivo_siguiente: encontrado en 0.1 s
+   Borrada. Total: 1
+   [  16.0 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 2:
+   [  17.9 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  18.3 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  19.5 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   [  20.6 s] Respondiendo «¿Vendiste este artículo?»
+   borrar/motivo_siguiente: encontrado en 0.0 s
+   Borrada. Total: 2
+   [  26.4 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 3:
+   [  28.5 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  28.8 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  30.0 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   [  31.4 s] Respondiendo «¿Vendiste este artículo?»
+   borrar/motivo_siguiente: encontrado en 0.0 s
+   Borrada. Total: 3
+   [  37.1 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 4:
+   [  39.2 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  39.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  40.7 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   [  42.0 s] Respondiendo «¿Vendiste este artículo?»
+   borrar/motivo_siguiente: encontrado en 0.0 s
+   Borrada. Total: 4
+   [  47.8 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 5:
+   [  49.5 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  49.9 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  51.0 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Borrada. Total: 5
+   [  53.0 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 6:
+   [  54.8 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  55.1 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  56.3 s] Confirmando
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 6
+   [  57.4 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 7:
+   [  60.6 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  60.8 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.9 s
+   [  62.0 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   [  63.0 s] Respondiendo «¿Vendiste este artículo?»
+   borrar/motivo_siguiente: encontrado en 0.0 s
+   Borrada. Total: 7
+   [  69.1 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 8:
+   [  71.1 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  71.5 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.9 s
+   [  72.6 s] Confirmando
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 8
+   [  73.8 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 9:
+   [  76.4 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  76.7 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.9 s
+   [  77.9 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   [  78.9 s] Respondiendo «¿Vendiste este artículo?»
+   borrar/motivo_siguiente: encontrado en 0.0 s
+   Borrada. Total: 9
+   [  84.7 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 10:
+   [  86.7 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  87.1 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  88.0 s] Confirmando
+   borrar/confirmar: encontrado en 0.6 s
+   Facebook preguntó si lo vendiste: elijo «Prefiero no responder».
+   [  89.0 s] Respondiendo «¿Vendiste este artículo?»
+   borrar/motivo_siguiente: encontrado en 0.1 s
+   Borrada. Total: 10
+   [  94.6 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 11:
+   [  96.6 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [  96.9 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.8 s
+   [  97.8 s] Confirmando
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 11
+   [  98.9 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 12:
+   [ 100.9 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 101.2 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.9 s
+   [ 102.2 s] Confirmando
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 12
+   [ 103.0 s] Esperando que Facebook la quite de la lista
+   borrar/compartir: encontrado en 0.4 s
+   borrar/compartir: encontrado en 0.4 s
+Publicación 13:
+   [ 105.1 s] Abriendo el menú «…»
+   borrar/opciones: encontrado en 0.0 s
+   [ 105.2 s] Buscando «Eliminar publicación»
+   borrar/eliminar: encontrado en 0.9 s
+   [ 106.3 s] Confirmando
+   borrar/confirmar: encontrado en 0.1 s
+   Borrada. Total: 13
+   [ 107.5 s] Esperando que Facebook la quite de la lista
+   Recargo la página y pruebo otra vez.
+   [ 114.2 s] Recargando la página
+   borrar/vacio: encontrado en 3.8 s
+No quedan publicaciones por borrar.
+Terminé. Publicaciones borradas: 13

@@ -1,0 +1,46 @@
+{
+  "accion": "publicar",
+  "usuario": "Gerald",
+  "inicio": "2026-10-31T08:29:43",
+  "fin": "2026-10-31T08:33:27",
+  "borradas": 0,
+  "mensaje": "",
+  "mensaje_borrar": "",
+  "resultados": [
+    {
+      "carpeta": "microfono-inalambrico-m9-lightning",
+      "titulo": "Micrófono Inalámbrico M9 — Lightning",
+      "estado": "publicado",
+      "detalle": "Publicado en 20 grupos",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-f92-moto-con-dvr-y-camaras",
+      "titulo": "Pantalla F92 CarPlay y Android Auto para moto + DVR y 2 cámaras",
+      "estado": "publicado",
+      "detalle": "Publicado en 20 grupos",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-f92-moto-sin-camaras",
+      "titulo": "Pantalla F92 CarPlay y Android Auto para moto",
+      "estado": "publicado",
+      "detalle": "Publicado en 20 grupos",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-m558-moto-con-dvr-y-camaras",
+      "titulo": "Pantalla M558 CarPlay y Android Auto para moto + DVR y 2 cámaras",
+      "estado": "publicado",
+      "detalle": "Publicado en 20 grupos",
+      "captura": ""
+    },
+    {
+      "carpeta": "pantalla-m558-moto-sin-dvr",
+      "titulo": "Pantalla M558 CarPlay y Android Auto para moto",
+      "estado": "publicado",
+      "detalle": "Publicado en 20 grupos",
+      "captura": ""
+    }
+  ]
+}

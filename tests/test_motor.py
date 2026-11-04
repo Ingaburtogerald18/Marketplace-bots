@@ -1,6 +1,8 @@
 """Borrar y publicar sin tocar el mouse de verdad."""
 import json
 
+import pytest
+
 from PIL import Image
 
 from conftest import BOTONES, pantalla
@@ -243,3 +245,41 @@ def test_diagnostico_dice_lo_mas_parecido():
     vision = Vision(BOTONES, capturar=pantalla("borrar_publicacion"), escala=1.5)
     valor, tamano = vision.diagnostico("borrar/compartir")
     assert valor > 0.95 and tamano == 1.0 and vision.escala == 1.5
+
+
+def _plantilla_con_fotos(tmp_path, n=2):
+    from marketplace_bot.modelos import Plantilla
+
+    carpeta = tmp_path / "pub" / "articulo"
+    carpeta.mkdir(parents=True)
+    fotos = []
+    for i in range(n):
+        ruta = carpeta / f"f{i}.jpg"
+        Image.new("RGB", (40, 30), "red").save(ruta)
+        fotos.append(ruta)
+    return Plantilla(carpeta=carpeta, titulo="X", fotos=fotos)
+
+
+def test_reintenta_si_la_ventana_de_fotos_no_se_cierra(acciones, tmp_path, monkeypatch):
+    """31 oct: la ventana "Abrir" siguió en la carpeta anterior y dijo "File not found"."""
+    monkeypatch.setattr("marketplace_bot.motor.publicar.time.sleep", lambda s: None)
+    respuestas = iter([True, False, True])  # se abre, no se cierra, al segundo intento si
+    acciones.esperar_ventana = lambda *a, **k: next(respuestas)
+    bot = PublicarBot(Vision(BOTONES, capturar=pantalla("publicar_anadir_fotos")), acciones,
+                      tmp_path, tmp_path / "s")
+    bot.subir_fotos(_plantilla_con_fotos(tmp_path))
+    pegados = [a[0] for nombre, a in acciones.hechas if nombre == "pegar"]
+    assert len(pegados) == 4 and pegados[1] == pegados[3] == '"01.jpg" "02.jpg"'
+
+
+def test_cierra_la_ventana_de_fotos_si_no_se_pudo(acciones, tmp_path, monkeypatch):
+    monkeypatch.setattr("marketplace_bot.motor.publicar.time.sleep", lambda s: None)
+    respuestas = iter([True, False, False])
+    acciones.esperar_ventana = lambda *a, **k: next(respuestas)
+    titulos = iter(["Open", ""])
+    acciones.ventana_activa = lambda: next(titulos)
+    bot = PublicarBot(Vision(BOTONES, capturar=pantalla("publicar_anadir_fotos")), acciones,
+                      tmp_path, tmp_path / "s")
+    with pytest.raises(FaltaBoton, match="fotos"):
+        bot.subir_fotos(_plantilla_con_fotos(tmp_path))
+    assert ("tecla", ("esc",)) in acciones.hechas

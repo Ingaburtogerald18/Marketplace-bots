@@ -1,0 +1,10 @@
+{
+  "accion": "borrar",
+  "usuario": "Gerald",
+  "inicio": "2026-10-31T10:17:55",
+  "fin": "2026-10-31T10:21:23",
+  "borradas": 13,
+  "mensaje": "",
+  "mensaje_borrar": "No quedan publicaciones por borrar.",
+  "resultados": []
+}

@@ -1,0 +1,115 @@
+2026-10-31 08:29 · Publicar
+Pantalla: 1920x1080 · escala de Windows: 100% · tamaño guardado: 100%
+Pongo al frente: (1) Facebook - Work - Microsoft Edge
+Artículo: Micrófono Inalámbrico M9 — Lightning (6 fotos)
+   [   4.5 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [   8.6 s] Subiendo 6 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [  13.5 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [  17.3 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.1 s
+   [  23.0 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.3 s
+   [  25.1 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [  30.0 s] Marcando grupos
+   Grupos marcados: 20
+   [  39.1 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla F92 CarPlay y Android Auto para moto + DVR y 2 cámaras (8 fotos)
+   [  47.7 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [  52.1 s] Subiendo 8 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [  57.3 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [  60.8 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.1 s
+   [  66.6 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [  68.3 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [  73.7 s] Marcando grupos
+   Grupos marcados: 20
+   [  82.8 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla F92 CarPlay y Android Auto para moto (4 fotos)
+   [  92.6 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.8 s
+   [  97.6 s] Subiendo 4 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 101.8 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 0.3 s
+   [ 104.7 s] Categoría: Varios
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Varios: encontrado en 6.0 s
+   [ 112.5 s] Estado: Nuevo
+   crear/estado: encontrado en 1.1 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 115.2 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.1 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 119.8 s] Marcando grupos
+   Grupos marcados: 20
+   [ 129.0 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla M558 CarPlay y Android Auto para moto + DVR y 2 cámaras (8 fotos)
+   [ 138.9 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [ 143.0 s] Subiendo 8 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 148.4 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [ 152.3 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.0 s
+   [ 158.2 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 160.1 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 165.5 s] Marcando grupos
+   Grupos marcados: 20
+   [ 174.7 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+Artículo: Pantalla M558 CarPlay y Android Auto para moto (7 fotos)
+   [ 185.5 s] Abriendo «Crear publicación»
+   crear/titulo: encontrado en 2.2 s
+   [ 189.7 s] Subiendo 7 fotos
+   crear/agregar_fotos: encontrado en 0.5 s
+   [ 194.7 s] Escribiendo título y precio
+   crear/titulo: encontrado en 0.3 s
+   crear/precio: encontrado en 1.1 s
+   [ 198.7 s] Categoría: Electrónica e informática
+   crear/categoria: encontrado en 0.3 s
+   crear/categorias/Electrónica e informática: encontrado en 4.1 s
+   [ 204.7 s] Estado: Nuevo
+   crear/estado: encontrado en 0.3 s
+   crear/estados/Nuevo: encontrado en 0.2 s
+   [ 206.7 s] Pegando la descripción
+   crear/descripcion: encontrado en 1.9 s
+   crear/siguiente: encontrado en 0.3 s
+   [ 212.4 s] Marcando grupos
+   Grupos marcados: 20
+   [ 221.5 s] Publicando
+   crear/publicar: encontrado en 0.2 s
+   Publicado.
+
+Terminé. Publicados: 5 de 5.

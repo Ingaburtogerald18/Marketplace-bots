@@ -1,0 +1,10 @@
+{
+  "accion": "borrar",
+  "usuario": "Gerald",
+  "inicio": "2026-10-31T07:25:19",
+  "fin": "2026-10-31T07:27:46",
+  "borradas": 13,
+  "mensaje": "Lo detuviste.",
+  "mensaje_borrar": "",
+  "resultados": []
+}
